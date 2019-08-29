@@ -1,0 +1,31 @@
+[SIZE]
+存放备份文件上次备份大小和本次备份大小，字段名{object}_last_size、{object}_current_size
+例：
+omi_last_size = ''
+omi_current_size = ''
+
+[MODIFICATION_TIME]
+存放备份文件上次备份修改时间和本次备份修改时间，字段名{object}_last_mt、{object}_current_mt
+例：
+omi_last_mt = ''
+omi_current_mt = ''
+
+[MAIL]
+发送邮件配置
+mail_host = 发送邮箱的smtp服务器
+mail_user = 邮箱用户名
+mail_pass = 邮箱密码
+sender = 发件人
+receivers = 收件人，多个时用','隔开
+receivers_admin = 管理员收件人，会收到备份文件错误信息，多个时用','隔开
+
+[PUBLIC_PATH]
+备份文件路径，字段名需要与[SIZE]和[MODIFICATION_TIME]的{object}对应
+例：
+omi = \XXX\XXX\XXX
+
+[PATH]
+备份文件名，字段名需要与[SIZE]和[MODIFICATION_TIME]的{object}对应，文件名内{TIME}为更新时间，必须存在
+例：
+omi = Backup_Of_OMI_Source_{TIME}.7z
+
